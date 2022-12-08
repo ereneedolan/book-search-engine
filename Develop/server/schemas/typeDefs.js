@@ -17,16 +17,31 @@ const typeDefs = gql`
     password: String
   }
 
+  type Auth {
+    token
+    user
+  }
+
   type Query {
     getSingleUser: []!
   }
 
   type Mutation {
-    CreateUser()
-      
-    saveBook()
+    login(
 
-    deleteBook()
+    )
+
+    CreateUser(
+
+    )
+      
+    saveBook(
+
+    )
+
+    deleteBook(
+      
+    )
       
   }
 `;
