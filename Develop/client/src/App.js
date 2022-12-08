@@ -4,6 +4,22 @@ import SearchBooks from './pages/SearchBooks';
 import SavedBooks from './pages/SavedBooks';
 import Navbar from './components/Navbar';
 
+
+import {
+  ApolloClient,
+  InMemoryCache,
+  ApolloProvider
+} from '@apollo/client';
+
+// without header authorization can just add uri into here instead of doing http 
+//const httpLink = createHttpLink({
+//   uri: '/graphql',
+// });
+const client = new ApolloClient({
+  uri: '/graphql',
+  cache: new InMemoryCache(),
+});
+
 function App() {
   return (
     <Router>
